@@ -1,14 +1,12 @@
-const mongoose=require ("mongoose");
+const mongoose = require("mongoose");
 
-const schema=mongoose.Schema;
+const schema = mongoose.Schema;
 
-const todoScheama=new schema({
-    userName:String,
-    mobile:String,
+const todoScheama = new schema({
+  userName: String,
+  mobile: String,
+});
 
-})
+const Todo = mongoose.model("todo", todoScheama);
 
-
-const Todo= mongoose.model("todo",todoScheama);
-
-module.exports= Todo;
+module.exports = Todo;
