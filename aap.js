@@ -1,9 +1,13 @@
 const express= require ("express");
 const mongoose =require ("mongoose");
 const todorouter=require("./Routers/todo");
+const cors=require("cors");
 
 const aap= express();
+aap.use(cors());
 aap.use(express.json());
+// var cors = require('cors')
+
 
 aap.use("/",todorouter);
 
